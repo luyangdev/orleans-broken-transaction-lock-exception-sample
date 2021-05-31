@@ -22,7 +22,7 @@ namespace TestGrains
         private readonly ITransactionalState<GrainState> _state;
 
         public TaskGrain(
-            [TransactionalState(nameof(TaskGrain))]
+            [TransactionalState(nameof(TaskGrain), Constants.StorageName)]
             ITransactionalState<GrainState> state)
         {
             _state = state;
